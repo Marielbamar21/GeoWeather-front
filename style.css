@@ -1,0 +1,129 @@
+.base {
+    background-image: url(./helpers/noaa-ZVhm6rEKEX8-unsplash.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
+    height: 3.5rem;
+    min-height: 10px;
+    max-height: 100px;
+}
+
+.row{
+    width: 100vw !important;
+    justify-content: space-between; /* Alinea elementos al comienzo y al final */
+        align-items: center;
+}
+.col-12{
+    display: flex;
+    justify-content: center !important;
+    justify-items: center !important;
+}
+
+.button{
+    margin:  2vh;
+    border: transparent !important;
+    font-size: 2rem !important;
+    color: #454b65 !important;
+    border-radius: 2rem !important;
+    box-shadow: 0.5rem 0.5rem rgb(59, 59, 59,0.5);
+
+}
+
+.button:hover{
+    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
+    color: white !important;
+}
+
+
+.icon{
+ color: white;
+ font-size: 5rem;
+ margin-right: 1rem;
+}
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    
+    
+}
+.input{
+    width: 52rem !important;
+    margin-bottom: 0 !important;
+    
+}
+
+.inp{
+    border-radius: 2rem !important;
+    background-color: transparent !important;
+    border-width: 3px !important;
+}
+
+.inp::placeholder{
+    color: white !important;
+    font-weight: bold;
+}
+
+.description{
+    margin: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.buttonPrincipal {
+    width: 52rem;
+    min-width: 15rem;
+    height: 8rem;
+    min-height: 4rem;
+}
+.secondButton {
+
+    width: 25rem;
+    min-width: 9rem;
+    height: 8rem;
+    min-height: 4rem;
+}
+
+.btn-gradient {
+    background: linear-gradient(-90deg,#f0c375 ,#e5c089,  #a9a1b7);
+}
+.back{
+    width: 1rem !important;
+    height: 3rem !important;
+    overflow: hidden;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    margin-left: 2%;
+}
+.iconBack{
+    width: 2rem !important;
+    height: 3rem !important;
+    margin-top: -0.5rem;
+    margin-left: -1rem;
+}
+.input1{
+    margin: 0 auto;
+}
+.column{
+    display: grid;
+    margin-top: 2rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px){
+    #back{
+        display:none;
+    }
+
+}
