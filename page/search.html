@@ -9,19 +9,21 @@
     <script src="https://kit.fontawesome.com/17a2975565.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./../index.js"> </script>
     <title>GeoWeather</title>
 </head>
 <body>
     <div class="container-flex topbar" >
-        <div class="row " style=></div>
+        <div class="row header" style=></div>
             <div class="col-12">
-                <button type="button" class="btn btn-primary btn-lg back" id="back">
+                <button type="button" class="btn btn-primary btn-lg back" id="back" onclick="back()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle iconBack" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                   </svg>
                 </button>
                 <div class="input-group input input1">
-                    <input type="text" class="form-control inp " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
+                    <input type="text" id="locationSearch" onkeydown="eventKey(event)" class="form-control inp " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
                     
                 </div>
             </div>
@@ -29,106 +31,87 @@
     <div class="container-flex">
         <div class="row">
             <div class="col-12">
-                <p class="temprature"> 12</p>
-                <p class="description">Temperature</p>
+                <p class="location" id="location"></p>
             </div>
+        <div ></div>
         </div>
         
-        <div class="row" >
-            <div class="col-sm-6 col-md-6 col-lg-3 column">
+            <div class="row row-temperature ">
+                <div class="col-12" >
+                
+                <div>
+                    <p class="temperature" id="temperature"></p>
+                    <p class="">Temperatura</p>
+                </div>
+                <div>
+                    <p class="temperature" id="apTemperature"></p>
+                    <p class="">Sensacion termica</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="row row-card" >
+            <div class="col-sm-12 col-md-6 col-lg-3 column">
                 <div class="card column " style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                        <p class="value" id="humidity"></p>
+                      <h5 class="detail">Humedad</h5>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                <div class="col-sm-12 col-md-6 col-lg-3 column">
+                  <div class=" column" style="width: 18rem;">
+                    <div class="card-body card">
+                        <p class="value" id="precipitationProb"></p>
+
+                        <h5 class="detail">Prob. de Precipitacion</h5>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                <div class="col-sm-12 col-md-6 col-lg-3 column">
+                    <div class="card column" style="width: 18rem;">
+                      <div class="card-body">
+
+                        <p class="value" id="rainIntensity"></p>
+
+                        <h5 class="detail">Intensidad de la lluvia</h5>
+                        
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
-                </div>
             </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-3 column">
+        <div class="row row-card">
+            
+            
+              <div class="col-sm-12 col-md-6 col-lg-3 column">
+                <div class="card column" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="value" id="uvHealthConcern"></p>
+                    <h5 class="detail">Intensidad de Rayos UV</h5>
+                  </div>
+                </div>
+              </div>
+            <div class="col-sm-12 col-md-6 col-lg-2 column">
                 <div class="card column" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                        <p class="value" id="visibility"></p>
+                    
+                      <h5 class="detail">Visibilidad</h5>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 column">
-                  <div class="card column" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                      <a href=""></a>
-                    </div>
-                  </div>
-                </div>
-            </div>
                 
+            </div>     
         </div>
     </div>
-</body> 
+</body>
+<script>
+    data();
+
+    
+    
+
+</script> 
 </html>

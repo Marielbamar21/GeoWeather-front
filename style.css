@@ -1,3 +1,4 @@
+
 .base {
     background-image: url(./helpers/noaa-ZVhm6rEKEX8-unsplash.jpg);
     background-size:cover;
@@ -6,29 +7,35 @@
     height: 50vh;
     display: flex;
     align-items: center;
+    min-height: 300px;
     
-}
-.topbar{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
-    height: 3.5rem;
-    min-height: 10px;
-    max-height: 100px;
-}
-
-.row{
-    width: 100vw !important;
-    justify-content: space-between; /* Alinea elementos al comienzo y al final */
-        align-items: center;
 }
 .col-12{
     display: flex;
     justify-content: center !important;
     justify-items: center !important;
 }
+.input{
+    width: 52rem !important;
+    margin-bottom: 0 !important;
+    
+}
 
+.inp{
+    border-radius: 2rem !important;
+    background-color: transparent !important;
+    border-width: 3px !important;
+}
+.inp::placeholder{
+    color: white !important;
+    font-weight: bold;
+}
+
+.description{
+    margin: 2rem;
+    color: white;
+    font-size: 2rem;
+}
 .button{
     margin:  2vh;
     border: transparent !important;
@@ -45,6 +52,25 @@
 }
 
 
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
+    height: 3.5rem;
+    min-height: 10px;
+    max-height: 100px;
+}
+
+.header{
+    width: 100vw !important;
+    justify-content: space-between; /* Alinea elementos al comienzo y al final */
+    align-items: center;
+    margin: 0px !important;
+}
+.row-card {
+    justify-content: center;
+}
 .icon{
  color: white;
  font-size: 5rem;
@@ -53,32 +79,11 @@
 .title{
     color: white;
     font-weight: bold;
-    font-size: 4rem;
-    
-    
-}
-.input{
-    width: 52rem !important;
-    margin-bottom: 0 !important;
-    
+    font-size: 4rem;  
 }
 
-.inp{
-    border-radius: 2rem !important;
-    background-color: transparent !important;
-    border-width: 3px !important;
-}
 
-.inp::placeholder{
-    color: white !important;
-    font-weight: bold;
-}
 
-.description{
-    margin: 2rem;
-    color: white;
-    font-size: 2rem;
-}
 
 .buttonPrincipal {
     width: 52rem;
@@ -120,10 +125,38 @@
     justify-items: center;
     justify-content: center;
 }
+.row-temperature{
+    justify-content: center;
+    text-align: center;
+}
+.temperature{
+    font-size: 8rem;
+}
+p{
+    margin: 0px !important;
+}
 
+.value{
+    margin-bottom: 1.5rem !important;
+    font-size: 4rem;
+    text-align: right;
+}
+.card{
+    
+    display: grid;
+    align-content: space-between;
+    width: 16rem !important;
+    height: 12rem !important;
+}
+.content{
+    display: grid !important;
+}
 @media (max-width: 900px){
     #back{
         display:none;
+    }
+    .temperature{
+        font-size: 4rem;
     }
 
 }
