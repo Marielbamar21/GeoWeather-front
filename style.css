@@ -70,6 +70,7 @@
 }
 .row-card {
     justify-content: center;
+    justify-items: center;
 }
 .icon{
  color: white;
@@ -82,8 +83,18 @@
     font-size: 4rem;  
 }
 
+.descripText{
+    font-size: 1.5rem ;
+}
 
+.location{
+    font-size: 2rem ;
+    margin-top: 1rem !important;
+}
 
+.p-temperature{
+    margin-left: -2.5rem !important;
+}
 
 .buttonPrincipal {
     width: 52rem;
@@ -150,6 +161,11 @@ p{
 }
 .content{
     display: grid !important;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
 }
 @media (max-width: 900px){
     #back{
