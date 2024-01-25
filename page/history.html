@@ -14,43 +14,53 @@
     <title>GeoWeather</title>
 </head>
 <body>
-    <div class="container-flex topbar" >
-        <div class="row header" style=></div>
+    <div class="container-flex topbar center-x center-y" >
+        <div class="row header center-y center-x" style=></div>
             <div class="col-12">
-                <button type="button" class="btn btn-primary btn-lg back" id="back" onclick="direccions('home')">
+                <button type="button" class="btn btn-primary btn-lg back" id="back" onclick="directions('home')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle iconBack" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                   </svg>
                 </button>
                 <div class="input-group input input1">
-                    <input type="text" id="locationSearch" onkeydown="eventKey(event,'search')" class="form-control inp " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
+                    <input type="text" id="locationSearch" onkeydown="eventKey(event,'search')" class="form-control input-style " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
                     
                 </div>
             </div>
     </div>
-    <div class="container-flex" id="rowLocation">
-      <div class="row">
-        <table id="dataTable">
-          <thead>
+    <div class="container-flex center-x" >
+      <div class="row history center-x">
+        <div class="col-10 table-content center-x">
+          <div class="card-list center-x center-y" style="width: 18rem;">
+            <div class="card-list-body">
+
+              
+              
+            
+        <table class="table table-hover table-weather" id="dataTable">
+          <thead class="headertable">
             <tr>
-              <th>Ubicacion</th>
+              <th >Locacion</th>
               <th>Temperatura</th>
-              <th>Sensacion termica</th>
-              <th>humedad</th>
-              <th>visivilidad</th>
+              <th>Sensacion Termica</th>
+              <th>Humedad</th>
+              <th>Visibilidad</th>
               <th>Intensidad de Rayos UV</th>
               <th>Prob. de Precipitacion</th>
-              <th>Intensidad de la lluvia</th>
+              <th>Intensidad de la lluvia</h5>
             </tr>
           </thead>
-          <tbody>
-            <!-- Data will be inserted here -->
+          <tbody class="bodytable" id="tableBody">
           </tbody>
         </table>
       </div>
+      </div>
+      </div>
     </div>
+  </div>
 </body>
 <script>
-  data();
+  document.addEventListener('DOMContentLoaded', function() {
+        historial();})
 </script> 
 </html>

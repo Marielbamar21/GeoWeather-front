@@ -14,56 +14,55 @@
     <title>GeoWeather</title>
 </head>
 <body>
-    <div class="container-flex topbar" >
-        <div class="row header" style=></div>
-            <div class="col-12">
-                <button type="button" class="btn btn-primary btn-lg back" id="back" onclick="direccions('home')">
+    <div class="container-flex topbar center-x center-y" >
+        <div class="row header center-y" style=></div>
+            <div class="col-12 center-x center-y">
+                <button type="button" class="btn btn-primary btn-lg back" id="back" onclick="directions('home')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle iconBack" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
                   </svg>
                 </button>
                 <div class="input-group input input1">
-                    <input type="text" id="locationSearch" onkeydown="eventKey(event,'search')" class="form-control inp " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
+                    <input type="text" id="locationSearch" onkeydown="eventKey(event,'search')" class="form-control input-style " placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
                     
                 </div>
             </div>
     </div>
     <div class="container-flex" id="rowLocation">
-        <div class="row" >
+        <div class="row " >
             <div class="col-12">
-                <p class="location descripText" id="location"></p>
-            </div>
-        <div ></div>
-        </div>
-        
-            <div class="row row-temperature ">
-                <div class="col-12" id="temps">
-                
-                <div>
-                    <p class="temperature" id="temperature"></p>
-                    <p class="descripText p-temperature">Temperatura</p>
-                </div>
-                <div>
-                    <p class="temperature" id="apTemperature"></p>
-                    <p class="descripText">Sensacion termica</p>
-                </div>
+                <p class="location detail center-text" id="location"></p>
             </div>
         </div>
         
+            <div class="row row-temperature  center-x">
+                <div class="col-sm-8 col-lg-12 col-md-12 center-x" id="temps">
+                      <div class="temperature">
+                          <p class="value-temperature" id="temperature"></p>
+                          <p class="descripText detail">Temperatura</p>
+                      </div>
+                      <p class="value-temperature">/</p>
+                      <div class=" ">
+                          <p class="value-temperature" id="apTemperature"></p>
+                          <p class="descripText detail">Sensacion termica</p>
+                      </div>
+            </div>
+        </div>
         
-        <div class="row row-card" id="cards" >
-            <div class="col-sm-12 col-md-6 col-lg-3 column" id="humidityCard">
-                <div class="card column " style="width: 18rem;" >
-                    <div class="card-body">
+        
+        <div class="row row-card center-x" id="cards" >
+            <div class="col-sm-12 col-md- col-lg-4 center-x" id="humidityCard">
+                <div class="card column center-x" style="width: 18rem;" >
+                    <div class="card-body card-style">
                         <p class="value" id="humidity"></p>
                       <h5 class="detail">Humedad</h5>
                       
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-2 column" id="visibilityCard">
-                  <div class="card column" style="width: 18rem;" >
-                      <div class="card-body">
+                <div class="col-sm-12 col-md-6 col-lg-4 center-x" id="visibilityCard">
+                  <div class="card column center-x" style="width: 18rem;" >
+                      <div class="card-body card-style">
                           <p class="value" id="visibility"></p>
                       
                         <h5 class="detail">Visibilidad</h5>
@@ -71,17 +70,17 @@
                     </div>
                   
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 column" id="uvHealthConcernCard">
-                <div class="card column" style="width: 18rem;" >
-                  <div class="card-body">
-                    <p class="value" id="uvHealthConcern"></p>
+              <div class="col-sm-12 col-md-6 col-lg-4 center-x" id="uvHealthConcernCard">
+                <div class="card column center-x" style="width: 18rem;" >
+                  <div class="card-body card-style">
+                    <p class="value-UVhealt" id="uvHealthConcern"></p>
                     <h5 class="detail">Intensidad de Rayos UV</h5>
                   </div>
                 </div>
               </div>  
-                <div class="col-sm-12 col-md-6 col-lg-3 column"  id="precipitationProbCard">
-                  <div class="card column" style="width: 18rem;" >
-                    <div class="card-body card">
+                <div class="col-sm-12 col-md-6 col-lg-4 center-x"  id="precipitationProbCard">
+                  <div class="card column center-x" style="width: 18rem;" >
+                    <div class="card-body card-style ">
                         <p class="value" id="precipitationProb"></p>
 
                         <h5 class="detail">Prob. de Precipitacion</h5>
@@ -89,9 +88,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 column" id="rainIntensityCard">
-                    <div class="card column" style="width: 18rem;">
-                      <div class="card-body">
+                <div class="col-sm-12 col-md-6 col-lg-4 center-x" id="rainIntensityCard">
+                    <div class="card column center-x" style="width: 18rem;">
+                      <div class="card-body card-style">
 
                         <p class="value" id="rainIntensity"></p>
 
@@ -107,6 +106,9 @@
     </div>
 </body>
 <script>
-  data();
+  document.addEventListener('DOMContentLoaded', function() {
+       data() })
+
+  
 </script> 
 </html>

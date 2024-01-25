@@ -1,40 +1,98 @@
+/* --------------------Generic Class-------------------- */
+.center-x{
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 
+}
+.center-y{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.center-text{
+    text-align: center;
+}
+
+body{
+    overflow-x: hidden;
+}
+.row{
+    width: 100% !important;
+    margin: 0 !important;
+}
+.detail{
+    font-weight: bold !important;
+    color: #9e5d85 !important;
+}
+.input-style{
+    border-radius: 2rem !important;
+    background-color: transparent !important;
+    border-width: 3px !important;
+}
+
+.input-style::placeholder{
+    color: white !important;
+    font-weight: bold;
+}
+.input{
+    width: 50% !important;
+    margin-bottom: 0 !important;
+    
+}
+
+/* --------------------------------------------------- */
+
+
+/* ---------------------index.html Class--------------- */
 .base {
     background-image: url(./helpers/noaa-ZVhm6rEKEX8-unsplash.jpg);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;	
     height: 50vh;
-    display: flex;
-    align-items: center;
     min-height: 300px;
     
 }
-.col-12{
-    display: flex;
-    justify-content: center !important;
-    justify-items: center !important;
-}
-.input{
-    width: 52rem !important;
-    margin-bottom: 0 !important;
-    
-}
 
-.inp{
-    border-radius: 2rem !important;
+.header{
+    width: 100vw !important;
+    justify-content: space-between;
+    margin: 0px !important;
+}
+.icon{
+    color: white;
+    font-size: 5rem;
+    margin-right: 1rem;
+   }
+
+   .back{
+    width: 1rem !important;
+    height: 3rem !important;
+    overflow: hidden;
     background-color: transparent !important;
-    border-width: 3px !important;
+    border-color: transparent !important;
+    margin-left: 2%;
 }
-.inp::placeholder{
-    color: white !important;
+.iconBack{
+    width: 2rem !important;
+    height: 3rem !important;
+    margin-top: -0.5rem;
+    margin-left: -1rem;
+}
+.title-home{
+    color: white;
     font-weight: bold;
+    font-size: 4rem;  
 }
-
-.description{
+.description-home{
     margin: 2rem;
     color: white;
     font-size: 2rem;
+}
+.btn-gradient {
+    background: linear-gradient(-90deg,#f0c375 ,#e5c089,  #a9a1b7);
 }
 .button{
     margin:  2vh;
@@ -50,51 +108,49 @@
     background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
     color: white !important;
 }
+/* --------------------------------------------------- */
 
-
-.topbar{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
-    height: 3.5rem;
-    min-height: 10px;
-    max-height: 100px;
-}
-
-.header{
-    width: 100vw !important;
-    justify-content: space-between; /* Alinea elementos al comienzo y al final */
-    align-items: center;
-    margin: 0px !important;
-}
-.row-card {
-    justify-content: center;
-    justify-items: center;
-}
-.icon{
- color: white;
- font-size: 5rem;
- margin-right: 1rem;
-}
-.title{
-    color: white;
-    font-weight: bold;
-    font-size: 4rem;  
-}
-
+/* ---------------------Search.html Class--------------- */
 .descripText{
+    margin-bottom: 3rem !important;
     font-size: 1.5rem ;
+    width: 15rem;
 }
 
 .location{
-    font-size: 2rem ;
+    font-size: 1.5rem ;
     margin-top: 1rem !important;
 }
+.type{
+    font-size: 2rem;
 
-.p-temperature{
-    margin-left: -2.5rem !important;
 }
+/* --------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+.topbar{
+    background: linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85);
+    width: 100% !important;
+    height: 3.5rem;
+    align-content: space-between!;
+    min-height: 10px;
+    max-height: 100px;
+    position: sticky;
+}
+
+
+
+
+
+
 
 .buttonPrincipal {
     width: 52rem;
@@ -110,37 +166,19 @@
     min-height: 4rem;
 }
 
-.btn-gradient {
-    background: linear-gradient(-90deg,#f0c375 ,#e5c089,  #a9a1b7);
-}
-.back{
-    width: 1rem !important;
-    height: 3rem !important;
-    overflow: hidden;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    margin-left: 2%;
-}
-.iconBack{
-    width: 2rem !important;
-    height: 3rem !important;
-    margin-top: -0.5rem;
-    margin-left: -1rem;
-}
+
+
 .input1{
     margin: 0 auto;
 }
 .column{
     display: grid;
-    margin-top: 2rem;
-    justify-items: center;
-    justify-content: center;
+    margin: 2rem;
 }
 .row-temperature{
-    justify-content: center;
     text-align: center;
 }
-.temperature{
+.value-temperature{
     font-size: 8rem;
 }
 p{
@@ -148,31 +186,122 @@ p{
 }
 
 .value{
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 3rem !important;
     font-size: 4rem;
+    text-align: right;
+}
+.value-UVhealt{
+    margin-bottom: 4rem !important;
+    font-size: 3rem;
     text-align: right;
 }
 .card{
     
+    border-left: hidden !important;
+    border-top: hidden !important;
+    border-image:linear-gradient(-90deg,#fecb56 , #f28f56,#9e5d85) !important;
+    border-width: 1rem !important;
+    border-image-slice: 1 !important; /* Ancho del borde */
+    min-width: 18rem !important;
+}
+.card-style{
+    
     display: grid;
     align-content: space-between;
-    width: 16rem !important;
-    height: 12rem !important;
+    width: 18rem !important;
+    height: 14rem !important;
+    padding: 1rem !important;
 }
 .content{
     display: grid !important;
 }
 
-.cards{
-    display: flex;
-    justify-content: center;
+.row-unlocation {
+    margin-top: 10%;
 }
+
+.p-unlocation {
+    font-size: 3rem;
+    text-align: center;
+
+}
+.notVisibility{
+    display: none !important;
+}
+.table-content{
+    height: 45rem;
+
+}
+
+.table-weather{
+    background-color: transparent;
+    margin: 0 !important;
+}
+.headertable{
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.history{
+    overflow: auto !important;
+    width: 100%;
+}
+
+.card-list{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 60rem !important;
+    height: 42rem;
+    border: solid;
+    margin-top: 2rem;
+    border-radius: 10%;
+    border-color: #fecb56;
+    overflow:  hidden !important;
+}
+
+.card-list-body{
+    height: 39rem;
+    overflow-x: auto;
+}
+
 @media (max-width: 900px){
+    .icon{
+        font-size: 3rem;
+    }
+    .title-home{
+        font-size: 3rem;  
+    }
+    .description-home{
+        font-size: 1.5rem;
+    }
+    .input{
+        width: 100% !important;
+    }
     #back{
         display:none;
     }
-    .temperature{
+    .value-temperature{
         font-size: 4rem;
+        justify-self: center;
+    }
+    .descripText{
+        margin-bottom: 3rem !important;
+        font-size: 1rem ;
+        width: 10rem;
+    }
+    .location{
+        font-size: 1rem;
+    }
+    .descripText{
+        font-size: 1rem ;
     }
 
+    .table-weather{
+        margin-top: 2rem;
+    }
+    .card{
+        margin: 1rem;
+    }
+    
 }

@@ -15,23 +15,23 @@
 
 </head>
 <body>
-    <div class="container-flex base">
-        <div class="row">
-            <div class="col-12 title " ><i class="fa-solid fa-earth-americas icon"></i>GeoWeather</div>
-            <div class="col-12 description"> Informacion del mundo al alcance de tus manos</div>
-            <div class="col-12">
-                <div class="input-group mb-3 input">
-                    <input id="locationSearch" type="text" class="form-control inp" onkeydown="eventKey(event,'home')" placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
+    <div class="container-flex base center-y">
+        <div class="row center-x">
+            <div class="col-12  center-x " ><i class="fa-solid fa-earth-americas icon"></i><p class="title-home">GeoWeather</p></div>
+            <div class="col-12 description-home center-x center-text"> Informacion del mundo al alcance de tus manos</div>
+            <div class="col-12 center-x">
+                <div class="input-group mb-3 input center-x">
+                    <input id="locationSearch" type="text" class="form-control input-style" onkeydown="eventKey(event,'home')" placeholder="Ciudad " aria-label="Ciudad" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
     </div>
     <div class="container-flex fondo">
-        <div class="row" > 
-            <div class="col-12"><button type="button" class="btn button buttonPrincipal btn-gradient " onclick="clickButton()">Buscar Ciudad</button></div>
+        <div class="row center-x" > 
+            <div class="col-12 center-x"><button type="button" class="btn button buttonPrincipal btn-gradient " onclick="clickButton()">Buscar Ciudad</button></div>
         </div>
-        <div class="row">
-            <div class="col-12"><button type="button" class="btn button buttonPrincipal btn-gradient " onclick="historial()">Historial</button></div>
+        <div class="row center-x">
+            <div class="col-12 center-x"><button type="button" class="btn button buttonPrincipal btn-gradient " onclick="directions('history')">Historial</button></div>
         </div>
     </div>
 </body>
